@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atividade CSS — Clube da Leitura</title>
+  <style>
+    :root{--bg:#f3f6f4;--paper:#fff;--ink:#1d2b25;--muted:#5b6a63;--green:#246747;--green2:#16452e;--line:#d8e3dc;--soft:#eaf3ed;--gold:#a66c17;--code:#111a16;--shadow:0 10px 28px #1d2b2510}
+    *{box-sizing:border-box}body{margin:0;background:linear-gradient(180deg,#e7f0e9 0,transparent 340px),var(--bg);color:var(--ink);font:16px/1.55 Arial,Helvetica,sans-serif}.page{width:min(1160px,calc(100% - 32px));margin:auto;padding:30px 0 48px}h1,h2,h3,p{margin-top:0}h1,h2,h3{line-height:1.2}.hero{display:grid;grid-template-columns:1.35fr .85fr;gap:20px;margin-bottom:22px}.hero-main,.hero-side,.panel{background:var(--paper);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow)}.hero-main{padding:30px}.eyebrow{margin:0 0 8px;color:var(--green2);font-size:.8rem;font-weight:bold;text-transform:uppercase;letter-spacing:.06em}.hero h1{margin:0;font-size:clamp(2rem,4.5vw,3.4rem)}.hero-main p:last-child{margin:14px 0 0;color:var(--muted);max-width:760px}.hero-side{display:grid;align-content:center;gap:11px;padding:22px;background:var(--soft)}.info{padding-bottom:10px;border-bottom:1px solid #2467472e}.info:last-child{padding:0;border:0}.info span{display:block;color:var(--muted);font-size:.75rem;font-weight:bold;text-transform:uppercase}.info strong{display:block;margin-top:2px}.toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px}.toc a{padding:8px 12px;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--green2);font-weight:bold;text-decoration:none}.toc a:hover{background:var(--soft)}.section-title{margin:30px 0 12px;font-size:1.55rem}.panel{margin-bottom:16px;overflow:hidden}.panel-body{padding:21px}.panel h3{margin-bottom:7px;font-size:1.12rem}.panel p{margin:8px 0;color:var(--muted)}.list{padding-left:21px;color:var(--muted)}.list li{margin:7px 0}.note{margin-top:13px;padding:12px 14px;border-left:4px solid var(--green);border-radius:0 6px 6px 0;background:var(--soft);color:#244c37}.warning{border-left-color:var(--gold);background:#fff6e4;color:#65460f}.tree,pre{margin:12px 0 0;overflow:auto;border-radius:7px;background:var(--code);color:#f1f5f2;font: .83rem/1.55 Consolas,"Courier New",monospace}pre code{display:block;padding:15px;white-space:pre}.tree{padding:14px;white-space:pre}.split{display:grid;grid-template-columns:1fr 1.1fr;gap:16px;align-items:start}.preview-wrap{padding:17px;background:#e8eee9}.student{min-height:365px;padding:14px;border:1px solid #8a9b90;background:#fff;color:#202820;font:14px/1.5 Verdana,Arial,sans-serif}.student header{padding:14px;border:1px solid #47584e;background:#f1f3f1}.student header h1{margin:0;font-size:1.45rem}.student nav{float:right;width:150px;margin:14px 0 16px 18px;padding:0;list-style:none}.student nav li{margin-bottom:7px;padding:9px;background:#edf2ee}.student nav a{color:#235d3d;font-weight:bold;text-decoration:none}.student h2{margin:18px 0 10px;font-size:1.2rem}.fake-cover{display:grid;place-items:center;width:125px;height:155px;float:left;margin:0 12px 10px 0;border:4px solid #d8e3dc;background:linear-gradient(145deg,#bfd7c4,#f4ead1);color:#365340;text-align:center;font-weight:bold}.student p{color:#29352e;margin:10px 0}.student footer{clear:both;margin-top:20px;padding:9px;border:1px solid #47584e;background:#f1f3f1;text-align:center;font-weight:bold}.codehead{padding:10px 14px;background:#0b1220;color:#dbeafe;font-weight:bold}.triple{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;align-items:stretch}.codepane,.resultpane{min-width:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff}.codepane pre{height:100%;min-height:340px;margin:0;border-radius:0;font-size:.76rem}.resultpane .student{min-height:340px;border:0}.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:11px;margin-top:12px}.card{padding:13px;border:1px solid var(--line);border-radius:7px;background:#fbfdfb}.card strong{display:block;margin-bottom:3px}.footer{margin-top:30px;color:var(--muted);text-align:center;font-size:.9rem}
+    @media(max-width:900px){.hero,.split,.triple{grid-template-columns:1fr}.codepane pre{min-height:0}.resultpane .student{min-height:300px}}@media(max-width:560px){.page{width:calc(100% - 20px);padding-top:16px}.hero-main,.hero-side,.panel-body{padding:16px}.cards{grid-template-columns:1fr}.student nav{float:none;width:100%;margin:12px 0;display:flex;flex-wrap:wrap;gap:6px}.student nav li{margin:0}.student .fake-cover{width:95px;height:125px}}
+  </style>
+</head>
+<body>
+<main class="page">
+  <header class="hero">
+    <div class="hero-main"><p class="eyebrow">Programação para Web · Atividade de laboratório</p><h1>Atividade CSS: Clube da Leitura</h1><p>Crie um pequeno site de resenhas de livros. A página inicial apresenta o clube e recomenda leituras; o menu lateral conduz a páginas complementares, cada uma dedicada a um livro. Primeiro construa as páginas em HTML. Depois, use uma folha CSS externa para dar unidade ao site.</p></div>
+    <aside class="hero-side" aria-label="Informações da atividade"><div class="info"><span>Tema</span><strong>Resenhas de livros</strong></div><div class="info"><span>Conteúdos</span><strong>HTML, links e CSS externo</strong></div><div class="info"><span>Elementos visuais</span><strong>Cabeçalho, menu lateral e rodapé</strong></div><div class="info"><span>Formato</span><strong>Em dupla</strong></div><div class="info"><span>Valor</span><strong>2,0 pts na Prova Mensal</strong></div></aside>
+  </header>
+  <nav class="toc" aria-label="Seções da atividade"><a href="#questao">Questão</a><a href="#pastas">Pastas</a><a href="#modelo">Modelo visual</a><a href="#codigo">HTML + CSS + resultado</a><a href="#etapas">Etapas</a><a href="#ajustes">Alterações</a></nav>
+
+  <section id="questao"><h2 class="section-title">Questão — Website Clube da Leitura</h2><article class="panel"><div class="panel-body"><h3>Objetivo</h3><p>Monte um site composto por uma página inicial e duas páginas de resenha. Todas devem compartilhar o mesmo cabeçalho, menu lateral, área de conteúdo e rodapé. O menu deve permitir chegar a cada livro e retornar à página inicial.</p><ul class="list"><li>Crie <code>index.html</code> como página inicial e dois HTML para as resenhas.</li><li>Inclua no menu links para Início, Livro 1 e Livro 2.</li><li>Em cada resenha, escreva sinopse breve, opinião da dupla, gênero e indicação de público leitor.</li><li>Use uma imagem de capa ou um espaço reservado com texto alternativo.</li><li>Crie e vincule uma folha externa chamada <code>estilo.css</code>.</li><li>Inclua um detalhe formatado com o atributo <code>style</code> inline no HTML.</li><li>Altere o conteúdo HTML e as regras CSS nos desafios finais.</li></ul><div class="note">A meta é praticar caminhos de links entre arquivos, repetir uma estrutura em outras páginas e perceber como CSS externo muda o visual do site inteiro.</div></div></article></section>
+
+  <section id="pastas"><h2 class="section-title">Estrutura de pastas</h2><article class="panel"><div class="panel-body"><h3>Organize os arquivos assim</h3><p>As duas resenhas ficarão dentro da pasta <code>livros</code>. Repare que o endereço para o CSS e para a página inicial muda quando o HTML está dentro dessa pasta.</p><div class="tree">clube-da-leitura/
+  index.html
+  estilo.css
+  livros/
+    livro-1.html
+    livro-2.html</div><div class="note warning">Na página inicial, o link para a resenha pode ser <code>livros/livro-1.html</code>. Em uma resenha, o link de volta é <code>../index.html</code>.</div></div></article></section>
+
+  <section id="modelo"><h2 class="section-title">Modelo visual da página inicial</h2><article class="panel"><div class="split"><div class="panel-body"><h3>Elementos que devem aparecer</h3><p>A primeira página deve ter a mesma organização visual mostrada ao lado. Os textos, livros, cores e imagens podem ser escolhidos pela dupla.</p><ul class="list"><li><b>Cabeçalho principal:</b> nome do site ou do clube.</li><li><b>Menu lateral:</b> Início e links para as duas resenhas.</li><li><b>Título do conteúdo:</b> por exemplo, “Leitura em destaque”.</li><li><b>Conteúdo:</b> capa, apresentação e chamada para ler a resenha.</li><li><b>Rodapé:</b> crédito do projeto ou nomes da dupla.</li></ul><div class="note">No primeiro momento, replique o exemplo simples. Depois, personalize o site com o HTML e o CSS.</div></div><div class="preview-wrap"><div class="student" aria-label="Prévia do site Clube da Leitura"><header><h1>Clube da Leitura</h1></header><nav><li><a href="#modelo">Início</a></li><li><a href="#modelo">Livro 1</a></li><li><a href="#modelo">Livro 2</a></li></nav><h2>Leitura em destaque</h2><div class="fake-cover">CAPA<br>DO LIVRO</div><p>Bem-vindo ao nosso clube! Aqui compartilhamos histórias que nos marcaram e resenhas feitas por estudantes.</p><p>Conheça a leitura desta semana e acesse o menu para descobrir outras recomendações.</p><footer>Clube da Leitura · Projeto da turma</footer></div></div></div></article></section>
+
+  <section id="codigo"><h2 class="section-title">HTML · CSS · Resultado lado a lado</h2><article class="panel"><div class="panel-body"><p>Observe como o HTML organiza os elementos e como o CSS externo controla a aparência. O destaque da resenha usa <code>style</code> diretamente no HTML para demonstrar formatação inline.</p></div><div class="triple">
+    <div class="codepane"><div class="codehead">HTML · index.html</div><pre><code>&lt;header&gt;
+  &lt;h1&gt;Clube da Leitura&lt;/h1&gt;
+&lt;/header&gt;
+&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="index.html"&gt;Início&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="livros/livro-1.html"&gt;Livro 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="livros/livro-2.html"&gt;Livro 2&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;h2&gt;Leitura em destaque&lt;/h2&gt;
+&lt;p&gt;Uma história para conversar.&lt;/p&gt;
+&lt;p style="border:1px solid #246747;
+  background:#eaf3ed; padding:10px;
+  text-align:center; font-weight:bold;"&gt;
+  Nossa resenha da semana!
+&lt;/p&gt;
+&lt;footer&gt;Clube da Leitura&lt;/footer&gt;</code></pre></div>
+    <div class="codepane"><div class="codehead">CSS · estilo.css</div><pre><code>body {
+  font-family: Verdana, Arial, sans-serif;
+  color: #1d2b25;
+  background-color: #f3f6f4;
+}
+
+header {
+  border: 1px solid #246747;
+  background-color: #eaf3ed;
+  padding: 18px;
+}
+
+nav {
+  float: right;
+  width: 170px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  padding: 12px;
+  margin-bottom: 8px;
+  background-color: #eaf3ed;
+}
+
+a { color: #16452e; }
+
+h2 { font-family: Georgia, serif; }
+
+footer {
+  clear: both;
+  border: 1px solid #246747;
+  padding: 10px;
+  text-align: center;
+}</code></pre></div>
+    <div class="resultpane"><div class="codehead">Resultado no navegador</div><div class="student"><header><h1>Clube da Leitura</h1></header><nav><ul><li><a href="#codigo">Início</a></li><li><a href="#codigo">Livro 1</a></li><li><a href="#codigo">Livro 2</a></li></ul></nav><h2>Leitura em destaque</h2><p>Uma história para conversar.</p><p style="border:1px solid #246747;background:#eaf3ed;padding:10px;text-align:center;font-weight:bold">Nossa resenha da semana!</p><footer>Clube da Leitura</footer></div></div>
+  </div><div class="panel-body"><div class="note"><b>Repare:</b> o menu flutua ao lado do conteúdo, o <code>clear: both</code> posiciona o rodapé abaixo das colunas, e as cores, bordas e fontes vêm do CSS. O <code>style</code> inline aplica regras apenas ao parágrafo da chamada.</div></div></article></section>
+
+  <section id="etapas"><h2 class="section-title">Etapas da atividade</h2><article class="panel"><div class="panel-body"><h3>Parte 1 — HTML e navegação</h3><ol class="list"><li>Crie os arquivos e pastas conforme a estrutura indicada.</li><li>Monte o cabeçalho, o menu, o título, o conteúdo e o rodapé da página inicial.</li><li>Crie as páginas Livro 1 e Livro 2 repetindo a estrutura.</li><li>Troque os links para apontarem aos arquivos corretos. Teste todos no navegador.</li><li>Acrescente informações próprias: título do livro, autoria, gênero, sinopse e opinião.</li></ol><h3>Parte 2 — CSS externo</h3><ol class="list"><li>Crie <code>estilo.css</code> e conecte-o no <code>&lt;head&gt;</code> de cada página.</li><li>Use caminhos relativos: <code>estilo.css</code> na raiz e <code>../estilo.css</code> dentro de <code>livros</code>.</li><li>Defina fonte, cor de fundo, cores dos textos, bordas e espaçamento.</li><li>Formate o menu para ficar lateral e o rodapé para aparecer abaixo do conteúdo.</li></ol><div class="note">O exemplo completo em HTML está no projeto inicial em <code>projeto-inicial/</code>. Ele começa sem CSS vinculado, para que você faça essa ligação como parte do exercício.</div></div></article></section>
+
+  <section id="ajustes"><h2 class="section-title">Questões e alterações finais</h2><article class="panel"><div class="panel-body"><h3>Modifique o CSS e o próprio HTML</h3><div class="cards"><div class="card"><strong>1. Cores e fontes · CSS</strong>Escolha novas cores para fundo, cabeçalho e links. Troque a fonte dos títulos e dos parágrafos.</div><div class="card"><strong>2. Bordas · CSS</strong>Altere cor, espessura e estilo das bordas do cabeçalho, menu e rodapé. Depois experimente remover uma delas.</div><div class="card"><strong>3. Menu lateral · CSS</strong>Altere largura, alinhamento, espaçamento e cor dos itens do menu. O menu continua claro e fácil de usar?</div><div class="card"><strong>4. Uma terceira resenha · HTML</strong>Crie mais um arquivo HTML de livro. Acrescente o novo link no menu de todas as páginas e teste os caminhos.</div><div class="card"><strong>5. Conteúdo e ordem · HTML</strong>Troque o texto de apresentação, acrescente uma seção “Nossa opinião” e reorganize o conteúdo com títulos e parágrafos.</div><div class="card"><strong>6. Rodapé · HTML + CSS</strong>Inclua os nomes da dupla no HTML e ajuste a aparência do rodapé no CSS externo.</div></div><div class="note warning"><b>Confira antes de entregar:</b> todas as páginas abrem; o menu leva aos destinos certos; o visual é consistente; as mudanças de estilo estão no arquivo CSS; há um exemplo de estilo inline no HTML.</div></div></article></section>
+  <footer class="footer">Atividade prática de HTML5 e CSS externo · Ensino Médio</footer>
+</main>
+</body>
+</html>
